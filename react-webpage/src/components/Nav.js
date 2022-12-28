@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Group_obj, Group_key_arr } from "./NavObj";
+import "../Nav.css";
 
 function Nav() {
 	const [search, setSearch] = useState("");
@@ -10,14 +11,21 @@ function Nav() {
 	return (
 		<div className="nav_container">
 			<div className="pagename">
-				<Link to={"/"}>MovieStudio</Link>
+				<Link to={"/"} style={{ textDecoration: "none", color: "#4dd6d3" }}>
+					MovieStudio
+				</Link>
 			</div>
 			<div className="grouppage">
 				{Group_key_arr.map((key) => {
 					return (
 						<div className="link" key={key}>
 							<div className="link_separate">
-								<Link to={`/page/${Group_obj[key]}/1`}>{key}</Link>
+								<Link
+									to={`/page/${Group_obj[key]}/1`}
+									style={{ textDecoration: "none", color: "#4dd6d3" }}
+								>
+									{key}
+								</Link>
 							</div>
 						</div>
 					);

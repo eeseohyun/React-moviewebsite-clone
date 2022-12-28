@@ -1,0 +1,50 @@
+.nav_container {
+	width: 100%;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	flex-direction: row;
+	justify-content: space-between;
+	font-weight: 700;
+	background-color: #263238;
+	z-index: 20; /*겹치지 않게 position 우선순위 부여*/
+}
+.pagename {
+	font-size: 33px;
+	margin-left: 10px;
+	transition: 0.2s ease-in-out;
+}
+
+.grouppage {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	transition: 0.2s ease-in-out;
+}
+
+.grouppage div {
+	margin-left: 20px;
+	font-size: 1.2rem;
+}
+
+.pagename:hover,
+.link_separate:hover {
+	transform: scale(1.1);
+}
+
+.searchbar input {
+	border: none;
+	background-color: transparent;
+	outline: none;
+	color: white;
+	border-bottom: 1px solid white;
+	margin-top: 10px;
+}
+.searchbar button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}

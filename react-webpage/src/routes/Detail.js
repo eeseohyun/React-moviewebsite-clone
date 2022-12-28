@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import MovieDetail from "../components/MovieDetail";
+import MovieDetail from "../render/MovieDetail";
 
 function Detail() {
 	const [movie, setMovie] = useState([]);

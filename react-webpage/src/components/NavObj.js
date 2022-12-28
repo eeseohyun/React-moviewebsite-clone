@@ -3,7 +3,7 @@ const Group_obj = {
 	Romance: "genre=romance",
 	Action: "genre=action",
 	Music: "genre=music",
-	Animation: "animation",
+	Animation: "genre=animation",
 };
 const Group_key_arr = Object.keys(Group_obj);
 
