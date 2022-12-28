@@ -1,0 +1,98 @@
+html {
+	font-size: 70%;
+}
+body {
+	background: #263238;
+}
+h2,
+h4,
+ul,
+li {
+	color: black;
+	margin: 0;
+	padding: 0;
+	font-weight: 700;
+}
+
+li {
+	list-style: none;
+	background-color: #4dd6d3;
+	border-radius: 20px;
+	width: 100px;
+	margin-top: 3px;
+	padding: 5px;
+	color: white;
+	font-weight: 800;
+}
+
+.loading {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 50%;
+}
+.loading_text {
+	font-size: 4rem;
+	color: white;
+}
+
+.movies_container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	margin: 10rem auto 0;
+	justify-content: space-between;
+}
+.movies_list {
+	margin-bottom: 10rem;
+	display: flex;
+	flex-basis: 48%;
+	background: white;
+	border-radius: 10px;
+}
+.movies_poster {
+	margin-right: 1rem;
+	position: relative;
+	left: 2rem;
+	top: -4rem;
+	box-shadow: 0 7px 14px 0px black;
+	align-self: flex-start;
+}
+.movies_poster img {
+	width: 180px;
+	transition: 0.3s ease-in-out;
+}
+.movies_poster img:hover {
+	transform: scale(1.2);
+	filter: blur(2px) grayscale(100%);
+}
+.movies_more {
+	opacity: 0;
+	position: absolute;
+	top: -23rem;
+	left: 5rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+.movies_more:hover + .movie_more {
+	opacity: 1;
+}
+.movies_contents {
+	margin: 2rem 2rem 2rem 4rem;
+}
+.movies_title {
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+.movies_release {
+	font-size: 1.2rem;
+	display: inline-block;
+	margin-bottom: 0.5rem;
+	color: #b1b1b1;
+}
+
+.movies_genres .genres_list:not(:last-child) {
+	border-right-width: 0.5rem;
+	border-color: transparent;
+}

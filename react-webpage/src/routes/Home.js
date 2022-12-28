@@ -6,7 +6,7 @@ function Home() {
 	const [movies, setMovies] = useState([]);
 	const getMoives = async () => {
 		const response = await fetch(
-			"https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year"
+			"https://yts.mx/api/v2/list_movies.json?minimum_rating=8.5&sort_by=year"
 		);
 		const json = await response.json();
 		setMovies(json.data.movies);
@@ -16,12 +16,15 @@ function Home() {
 	useEffect(() => {
 		getMoives();
 	}, []);
+
 	return (
-		<div>
+		<div className="container">
 			{loading ? (
-				<h1>잠시만 기다려주세요</h1>
+				<div className="loading">
+					<h1 className="loading_text">잠시만 기다려주세요</h1>
+				</div>
 			) : (
-				<div>
+				<div className="movies_container">
 					{movies.map((movie) => (
 						<Movie
 							key={movie.id}
@@ -30,6 +33,7 @@ function Home() {
 							title={movie.title}
 							summary={movie.summary}
 							genres={movie.genres}
+							year={movie.year}
 						/>
 					))}
 				</div>
